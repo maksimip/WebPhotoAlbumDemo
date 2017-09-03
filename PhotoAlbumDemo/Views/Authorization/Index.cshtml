@@ -1,4 +1,10 @@
-﻿@using System.Web.Optimization
+﻿
+@{
+    ViewBag.Title = "Index";
+    //Layout = "~/Views/Shared/_BasicLayout.cshtml";
+}
+
+@using System.Web.Optimization
 <!DOCTYPE html>
 
 <html>
@@ -32,38 +38,53 @@
         <div class="container d-flex justify-content-between">
             <a href="#" class="navbar-brand">Photo<i class="fa fa-thumbs-up" aria-hidden="true">Album</i></a>
             <form class="form-inline">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-            <div class="dropdown show">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Albums
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item">Item1</a>
-                    <a class="dropdown-item">Item2</a>
-                    <a class="dropdown-item">Item3</a>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse"data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="true"
+                <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Log in</button>
+            </form>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="true"
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
     </div>
-
-        @RenderBody()
+    <h1>Registration</h1>
+    <form>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Last name">
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col">
+                <input type="email" class="form-control" placeholder="Email" />
+            </div>
+            <div class="col">
+                <input type="password" class="form-control" placeholder="Password" />
+            </div>
+        </div><br>
+        <button type="submit" class="btn btn-secondary">Registration</button>
+    </form>
     <footer class="text-muted">
         <div class="container">
-            <p class="float-right">
-                <a href="#">Back to top</a>
-            </p>
         </div>
     </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/popper")
-    @Scripts.Render("~/bundles/bootstrap") 
+    @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/holder")
 </body>
 </html>
+
+
+
+
