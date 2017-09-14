@@ -35,7 +35,7 @@ namespace WebUI.Controllers
                 if (user.Pass == userParam.Pass)
                 {
                     
-                    return RedirectToAction("Index", "Profile", new { name = user.FirstName });
+                    return RedirectToAction("Index", "Profile", new { name = user.FirstName, email = user.Email });
                 }
                 else
                 {
@@ -54,7 +54,7 @@ namespace WebUI.Controllers
             bool state = repository.AddUser(user);
             if (state)
             {
-                return RedirectToAction("Index", "Profile", new { name = user.FirstName });
+                return RedirectToAction("Index", "Profile", new { name = user.FirstName, email = user.Email });
             }
             else
             {

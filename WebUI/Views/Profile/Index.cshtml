@@ -37,7 +37,7 @@
             <div class="col-sm-8 py-4">
                 <h4 class="text-white">@Request.QueryString["name"]</h4>
                 <p class="text-muted">information of user</p>
-                <a href="#" class="text-white">Edit</a>
+                @Html.ActionLink("Edit", "EditProfile", "Profile", new { email = @Request.QueryString["email"]}, new { @class = "text-white"})
             </div>
             <div class="col-sm-4 py-4">
                 <h4 class="text-white">Contact</h4>

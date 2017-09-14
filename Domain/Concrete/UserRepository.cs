@@ -48,7 +48,20 @@ namespace Domain.Concrete
 
         public void SaveUser(User user)
         {
-            throw new NotImplementedException();
+            User dbEntry = context.Users.Find(user.IdUser);
+
+            if (dbEntry != null)
+            {
+                dbEntry.FirstName = user.FirstName;
+                dbEntry.LastName = user.LastName;
+                dbEntry.Email = user.Email;
+                dbEntry.Pass = user.Pass;
+                dbEntry.Country = user.Country;
+                dbEntry.Age = user.Age;
+            }
+
+            context.SaveChanges();
+
         }
     }
 }
